@@ -1,0 +1,450 @@
+{
+	"info": {
+		"_postman_id": "f1d7620e-0961-4eb5-a578-d2e25c0f748e",
+		"name": "Blog-Test-Backpack",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "fullname",
+							"value": "Ralph Jay Pepito",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "rjptest01@test.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "testtest",
+							"type": "default"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "testtest",
+							"type": "default"
+						},
+						{
+							"key": "photo",
+							"value": "https://fastly.picsum.photos/id/973/200/300.jpg?hmac=gFjS6R63ZUmM9pkLFyPxuEmsxvZ_e8VJxB3mcXpvTUQ",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Sample",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fullname",
+									"value": "Ralph Jay Pepito",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "rjptest01@test.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "testtest",
+									"type": "default"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "testtest",
+									"type": "default"
+								},
+								{
+									"key": "photo",
+									"value": "https://fastly.picsum.photos/id/973/200/300.jpg?hmac=gFjS6R63ZUmM9pkLFyPxuEmsxvZ_e8VJxB3mcXpvTUQ",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "rjptest01@test.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "testtest",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Sample",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "rjptest01@test.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "testtest",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Add Post",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Cookie",
+						"value": "laravel_session=JiYzUFr7KkClD01OQaUURwVNIWVk4pvq0dZxSYy1",
+						"description": "Note: Set laravel session id from api/login",
+						"type": "default"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "tag_id",
+							"value": "1",
+							"type": "default"
+						},
+						{
+							"key": "title",
+							"value": "Title test",
+							"type": "default"
+						},
+						{
+							"key": "description",
+							"value": "description test",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/admin/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"admin",
+						"post"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Sample",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Cookie",
+								"value": "laravel_session=JiYzUFr7KkClD01OQaUURwVNIWVk4pvq0dZxSYy1",
+								"description": "Note: Set laravel session id from api/login",
+								"type": "default"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "tag_id",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "title",
+									"value": "Title test",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "description test",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/admin/post",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"admin",
+								"post"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Create Tag",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Cookie",
+						"value": "laravel_session=JiYzUFr7KkClD01OQaUURwVNIWVk4pvq0dZxSYy1",
+						"description": "Note: Set laravel session id from api/login",
+						"type": "default"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Tag Ralph",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/admin/tag",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"admin",
+						"tag"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Post",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Cookie",
+						"value": "laravel_session=JiYzUFr7KkClD01OQaUURwVNIWVk4pvq0dZxSYy1",
+						"description": "Note: Set laravel session id from api/login",
+						"type": "default"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/admin/post/search?search[value]=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"admin",
+						"post",
+						"search"
+					],
+					"query": [
+						{
+							"key": "search[value]",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
