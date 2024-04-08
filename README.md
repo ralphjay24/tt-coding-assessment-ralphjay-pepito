@@ -1,6 +1,6 @@
 # A simple blog application
 
-This is a simple [Laravel](https://laravel.com/docs/10.x) application created with its built-in
+This is a simple [Laravel](https://laravel.com/docs/10.x) and [Laravel Backpack](https://backpackforlaravel.com/) application created with its built-in
 solution [Sail](https://laravel.com/docs/8.x/sail) for running project
 using [Docker](https://www.docker.com/)
 
